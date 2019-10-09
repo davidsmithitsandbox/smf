@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button type="button" class="btn btn-primary">
+  <div class="button-wrapper">
+    <button type="button" class="btn btn-primary float-right">
       <slot>Submit</slot>
     </button>
   </div>
@@ -10,4 +10,8 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+.button-wrapper {
+  padding-top: 0.5em;
+}
+</style>

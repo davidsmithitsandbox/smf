@@ -30,5 +30,6 @@ export default {
 .row,
 .justify-content-md-center .col-md-auto {
   padding: 0;
+  padding-top: 0.5em;
 }
 </style>

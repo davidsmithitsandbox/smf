@@ -4,7 +4,4 @@ export const app = {
       appName: "SM"
     };
   }
-  //   created() {
-  //     console.log("mixin");
-  //   }
 };

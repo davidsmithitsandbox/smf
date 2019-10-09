@@ -1,5 +1,5 @@
 <template>
-  <base-card v-bind="login">
+  <base-card v-bind="login" v-bind:header="'Welcome to ' + appName">
     <BaseInputEmail v-bind="InputEmail"></BaseInputEmail>
     <BaseButtonSubmit></BaseButtonSubmit>
   </base-card>
@@ -15,7 +15,6 @@ export default {
         title: "Your email"
       },
       login: {
-        header: "Login to ",
         body: "body"
       }
     };
