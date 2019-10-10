@@ -32,4 +32,8 @@ export default {
   padding: 0;
   padding-top: 0.5em;
 }
+.card-header {
+  background-color: white;
+  border: none;
+}
 </style>

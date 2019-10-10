@@ -3,27 +3,32 @@
     <baseLabel v-if="label" :for="id">{{ label }}</baseLabel>
     <input
       :name="name"
-      type="email"
+      type="password"
       class="form-control"
       :id="id"
-      aria-describedby="emailHelp"
+      aria-describedby="passwordHelp"
       :placeholder="placeholder"
     />
   </baseFormGroup>
 </template>
 
 <script>
-import { mixinInputEmail } from "./../../mixins/mixinInputEmail.js";
 export default {
-  mixins: [mixinInputEmail],
   props: {
     name: {
-      default: "email",
+      default: "",
       type: String
     },
     label: {
       default: "",
       type: String
+    },
+    placeholder: {
+      default: "Password",
+      type: String
+    },
+    id: {
+      default: "password"
     }
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <nav id="nav-bar-top" class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav id="nav-bar-top" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <router-link class="navbar-brand" to="/">{{ appName }}</router-link>
     <!-- <a class="navbar-brand" href="/">Melody</a> -->
     <button

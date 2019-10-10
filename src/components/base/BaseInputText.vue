@@ -3,9 +3,10 @@
     <baseFormGroup>
       <baseLabel v-if="label" :for="id">{{ label }}</baseLabel>
       <input
+        :name="name"
         :id="id"
-        class="form-control"
         type="text"
+        class="form-control"
         :placeholder="placeholder"
       />
     </baseFormGroup>
@@ -17,6 +18,9 @@ export default {
   props: {
     label: {
       default: ""
+    },
+    name: {
+      default: "text"
     },
     id: {
       default: ""

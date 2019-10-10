@@ -14,18 +14,12 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home,
-      meta: {
-        title: "SM | Home"
-      }
+      component: Home
     },
     {
       path: "/login",
       name: "login",
-      component: Login,
-      meta: {
-        title: "SM | Home"
-      }
+      component: Login
     },
     {
       path: "/users",

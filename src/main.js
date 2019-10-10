@@ -15,13 +15,13 @@ import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 Vue.config.productionTip = false;
-const requireComponent = require.context(
+var requireComponent = require.context(
   // The relative path of the components folder
-  "./components/base",
+  "./components",
   // Whether or not to look in subfolders
-  false,
+  true,
   // The regular expression used to match base component filenames
-  /Base[A-Z]\w+\.(vue|js)$/
+  /[A-Z]\w+\.(vue|js)$/
 );
 
 requireComponent.keys().forEach(fileName => {
