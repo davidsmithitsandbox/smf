@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <label for="exampleInputEmail1">{{ title }}</label>
+  <baseFormGroup>
+    <baseLabel :for="id"></baseLabel>
     <input
       type="email"
       class="form-control"
-      id="exampleInputEmail1"
+      :id="id"
       aria-describedby="emailHelp"
-      placeholder="Enter email"
+      :placeholder="placeholder"
     />
-    <!-- <small id="emailHelp" class="form-text text-muted"
-      >We'll never share your email with anyone else.</small
-    >-->
-  </div>
+  </baseFormGroup>
 </template>
 
 <script>
+import { mixinInputEmail } from "./../../mixins/mixinInputEmail.js";
 export default {
+  mixins: [mixinInputEmail],
   props: {
-    title: {
-      default: "Email",
-      type: String
+    label: {
+      default: "Enter Your Email"
     }
   }
 };

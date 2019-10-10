@@ -1,7 +1,23 @@
 <template>
-  <base-card v-bind="login" v-bind:header="'Welcome to ' + appName">
-    <BaseInputEmail v-bind="InputEmail"></BaseInputEmail>
-    <BaseButtonSubmit></BaseButtonSubmit>
+  <base-card v-bind:header="loginHeader">
+    <BaseForm>
+      <BaseRow>
+        <BaseColumn>
+          <BaseInputText
+            :id="'name_first'"
+            :placeholder="'First name'"
+          ></BaseInputText>
+        </BaseColumn>
+        <BaseColumn>
+          <BaseInputText
+            :id="'name_last'"
+            :placeholder="'Last name'"
+          ></BaseInputText>
+        </BaseColumn>
+      </BaseRow>
+      <BaseInputEmail></BaseInputEmail>
+      <BaseButtonSubmit></BaseButtonSubmit>
+    </BaseForm>
   </base-card>
 </template>
 
@@ -10,14 +26,12 @@ import { app } from "../mixins/app.js";
 export default {
   mixins: [app],
   data: function() {
-    return {
-      InputEmail: {
-        title: "Your email"
-      },
-      login: {
-        body: "body"
-      }
-    };
+    return {};
+  },
+  computed: {
+    loginHeader: function() {
+      return "Create Your " + this.appName + " Account";
+    }
   }
 };
 </script>
