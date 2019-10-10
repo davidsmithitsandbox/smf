@@ -3,7 +3,7 @@
     :id="'body'"
     v-bind:header="'Create Your ' + this.appName + ' Account'"
   >
-    <BaseForm action="#" @submit.prevent="register">
+    <BaseForm action="#" @submit.prevent="get">
       <BaseRow>
         <BaseColumn :id="'name_first_column'">
           <BaseInputText
@@ -23,17 +23,17 @@
         </BaseColumn>
       </BaseRow>
       <BaseInputEmail :name="'usernamename'" v-model="email"></BaseInputEmail>
-      <BaseInputPassword
+      <!-- <BaseInputPassword
         :name="'password'"
         v-model="password"
-      ></BaseInputPassword>
+      ></BaseInputPassword>-->
       <BaseButtonSubmit></BaseButtonSubmit>
     </BaseForm>
   </base-card>
 </template>
 
 <script>
-import Axios from "axios";
+import axios from "axios";
 export default {
   data() {
     return {
@@ -44,29 +44,26 @@ export default {
     };
   },
   methods: {
-    login() {
-      console.log("hi");
-      this.$store.dispatch("retrieveToken", {
-        username: this.email,
-        password: this.password
-      });
-    },
-    register(context, data) {
-      console.log("hi");
-      return new Promise((resolve, reject) => {
-        Axios.post("http://192.168.10.30/api/register", {
-          name: data.name,
-          email: data.email,
-          password: data.password
+    get() {
+      axios
+        .get("http://sm.test/a")
+        .then(response => {
+          console.log(response.data);
         })
-          .then(response => {
-            resolve(response);
-          })
-          .catch(error => {
-            reject(error);
-          });
-      });
+        .catch(response => {
+          console.log(response.data);
+        });
     }
+  },
+  created() {
+    axios
+      .get("http://sm.test/a")
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(response => {
+        console.log(response.data);
+      });
   }
 };
 </script>
