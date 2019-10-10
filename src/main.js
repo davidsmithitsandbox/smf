@@ -5,6 +5,10 @@ import store from "./store";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 
+// Global Mixins
+import globalMixin from "./mixins/globalMixin";
+Vue.mixin(globalMixin);
+
 // Frameworks
 import "./../node_modules/jquery/dist/jquery.min.js";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";

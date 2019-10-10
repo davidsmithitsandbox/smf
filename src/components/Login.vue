@@ -22,9 +22,8 @@
 </template>
 
 <script>
-import { app } from "../mixins/app.js";
 export default {
-  mixins: [app],
+  title: "login",
   data: function() {
     return {};
   },

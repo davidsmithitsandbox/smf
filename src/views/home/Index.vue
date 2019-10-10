@@ -3,7 +3,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  title: "home"
+};
 </script>
 
 <style></style>
