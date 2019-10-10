@@ -1,14 +1,14 @@
 <template>
-  <base-card v-bind:header="loginHeader">
+  <base-card :id="'body'" v-bind:header="loginHeader">
     <BaseForm>
       <BaseRow>
-        <BaseColumn>
+        <BaseColumn :id="'name_first_column'">
           <BaseInputText
             :id="'name_first'"
             :placeholder="'First name'"
           ></BaseInputText>
         </BaseColumn>
-        <BaseColumn>
+        <BaseColumn :id="'name_last_column'">
           <BaseInputText
             :id="'name_last'"
             :placeholder="'Last name'"
@@ -36,4 +36,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+#body {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+#name_first_column {
+  padding-right: 0.5em;
+}
+#name_last_column {
+  padding-left: 0.5em;
+}
+</style>

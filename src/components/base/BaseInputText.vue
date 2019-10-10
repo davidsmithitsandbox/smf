@@ -1,7 +1,7 @@
 <template>
   <div>
     <baseFormGroup>
-      <baseLabel :for="id"></baseLabel>
+      <baseLabel v-if="label" :for="id">{{ label }}</baseLabel>
       <input
         :id="id"
         class="form-control"
@@ -15,6 +15,9 @@
 <script>
 export default {
   props: {
+    label: {
+      default: ""
+    },
     id: {
       default: ""
     },

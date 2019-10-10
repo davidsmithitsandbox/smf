@@ -1,6 +1,6 @@
 <template>
   <baseFormGroup>
-    <baseLabel :for="id"></baseLabel>
+    <baseLabel v-if="label" :for="id">{{ label }}</baseLabel>
     <input
       type="email"
       class="form-control"
@@ -17,7 +17,8 @@ export default {
   mixins: [mixinInputEmail],
   props: {
     label: {
-      default: "Enter Your Email"
+      default: "",
+      type: String
     }
   }
 };
