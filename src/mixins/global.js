@@ -1,14 +1,14 @@
 export default {
   data() {
     return {
-      appName: "SM"
+      brandName: "Hover"
     };
   },
   created() {
     const title = getTitle(this);
 
     if (title) {
-      document.title = this.appName + " | " + title;
+      document.title = this.brandName + " | " + title;
     }
   }
 };

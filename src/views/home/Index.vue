@@ -8,13 +8,4 @@ export default {
 };
 </script>
 
-<style>
-html {
-  height: 100%;
-}
-
-html,
-#app {
-  background-color: #f7f7f7;
-}
-</style>
+<style></style>

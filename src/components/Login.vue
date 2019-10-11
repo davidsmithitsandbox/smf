@@ -1,71 +1,26 @@
 <template>
-  <base-card
-    :id="'body'"
-    v-bind:header="'Create Your ' + this.appName + ' Account'"
-  >
-    <BaseForm action="#" @submit.prevent="get">
-      <BaseRow>
-        <BaseColumn :id="'name_first_column'">
-          <BaseInputText
-            v-model="name_first"
-            :name="'name'"
-            :id="'name_first'"
-            :placeholder="'First name'"
-          ></BaseInputText>
-        </BaseColumn>
-        <BaseColumn :id="'name_last_column'">
-          <BaseInputText
-            v-model="name_last"
-            :name="'name_last'"
-            :id="'name_last'"
-            :placeholder="'Last name'"
-          ></BaseInputText>
-        </BaseColumn>
-      </BaseRow>
-      <BaseInputEmail :name="'usernamename'" v-model="email"></BaseInputEmail>
-      <!-- <BaseInputPassword
-        :name="'password'"
-        v-model="password"
-      ></BaseInputPassword>-->
-      <BaseButtonSubmit></BaseButtonSubmit>
-    </BaseForm>
+  <base-card :id="'body'">
+    <BaseCardHeader>
+      <p class="text-center">
+        {{ "Login to " + this.brandName }} |
+        <a href="/register" role="button">Create an Account</a>
+      </p>
+    </BaseCardHeader>
+    <BaseCardBody id="body">
+      <BaseForm action="#" @submit.prevent="get">
+        <BaseInputEmail :name="'usernamename'" v-model="email"></BaseInputEmail>
+        <BaseInputPassword
+          :name="'password'"
+          v-model="password"
+        ></BaseInputPassword>
+        <BaseButtonSubmit></BaseButtonSubmit>
+      </BaseForm>
+    </BaseCardBody>
   </base-card>
 </template>
 
 <script>
-import axios from "axios";
-export default {
-  data() {
-    return {
-      name_first: "",
-      name_last: "",
-      email: "",
-      password: ""
-    };
-  },
-  methods: {
-    get() {
-      axios
-        .get("http://sm.test/a")
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(response => {
-          console.log(response.data);
-        });
-    }
-  },
-  created() {
-    axios
-      .get("http://sm.test/a")
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(response => {
-        console.log(response.data);
-      });
-  }
-};
+export default {};
 </script>
 
 <style scoped>
@@ -79,5 +34,8 @@ export default {
 }
 #name_last_column {
   padding-left: 0.5em;
+}
+#body {
+  padding-top: 0;
 }
 </style>

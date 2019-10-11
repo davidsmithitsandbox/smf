@@ -1,8 +1,7 @@
 <template>
-  <BaseApp>
-    <NavbarMain />
-    <router-view />
-  </BaseApp>
+  <div class="card-body">
+    <slot></slot>
+  </div>
 </template>
 
 <script>

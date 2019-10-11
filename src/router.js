@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "@/views/home/Index.vue";
 import Login from "@/views/login/Index.vue";
+import Register from "@/views/register/Index.vue";
 import Users from "@/views/users/Index.vue";
 import UsersShow from "@/views/users/Show.vue";
 import NotFound from "@/components/NotFound.vue";
@@ -20,6 +21,11 @@ export default new Router({
       path: "/login",
       name: "login",
       component: Login
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: Register
     },
     {
       path: "/users",

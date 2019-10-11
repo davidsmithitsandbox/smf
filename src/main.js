@@ -6,8 +6,8 @@ import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
 
 // Global Mixins
-import globalMixin from "./mixins/globalMixin";
-Vue.mixin(globalMixin);
+import global from "./mixins/global";
+Vue.mixin(global);
 
 // Frameworks
 import "./../node_modules/jquery/dist/jquery.min.js";

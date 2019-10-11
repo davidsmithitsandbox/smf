@@ -2,10 +2,7 @@
   <div class="row justify-content-md-center">
     <div class="col-md-auto">
       <div class="card">
-        <div class="card-header">{{ header }}</div>
-        <div class="card-body">
-          <slot></slot>
-        </div>
+        <slot></slot>
       </div>
     </div>
   </div>

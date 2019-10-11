@@ -1,8 +1,5 @@
 <template>
-  <BaseApp>
-    <NavbarMain />
-    <router-view />
-  </BaseApp>
+  <span class="navbar-toggler-icon"></span>
 </template>
 
 <script>
